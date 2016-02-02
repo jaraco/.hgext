@@ -40,7 +40,7 @@ class ShortRepository(object):
         context = dict((str(i + 1), v) for i, v in enumerate(parts))
         return ''.join(self.templater.process(self.url, context)) + tail
 
-@command('expand-scheme', norepo=True)
+@command('debugexpandscheme', norepo=True)
 def expand_scheme(ui, url, **opts):
     """given a repo path, provide the scheme-expanded path
     """
